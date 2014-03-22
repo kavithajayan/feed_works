@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Value</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function() {
+	$("button").click(function() {
+		$("#result").html($("#test").val());
+	});
+});
+</script>
+</head>
+<body>
+<p>Name: <input type="text" id="test" value="Kavitha" /></p>
+<button>Show value</button>
+<div id="result">Hii</div>
+</body>
+</html>
