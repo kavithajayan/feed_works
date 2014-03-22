@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html>
+<title>jQuery content slider</title>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+	$(".open").click(function(){
+		$(this).parent().find(".para").show();
+//$(this).next().toggleClass("show");
+	});
+});
+$(document).ready(function(){
+	$(".close").click(function(){
+		$(this).parent().find(".para").hide();
+	});
+});
+$(document).ready(function(){
+	$(".show_all").click(function(){
+		$(".para").show();
+	});
+});
+$(document).ready(function(){
+	$(".hide_all").click(function(){
+		$(".para").hide();
+	});
+});
+</script>
+
+<style>
+.para {
+display: none;
+}
+.show {
+display:block;
+}
+.slider {
+width: 400px;
+margin: 0 auto;
+border:1px solid #ccc;
+background-color: beige;
+padding: 10px;
+}
+h1 {
+margin-bottom: 0;
+}
+.all {
+width: 400px;
+margin: 0 auto;
+text-align: right;
+margin-top: 40px;
+}
+.show_all:hover, .hide_all:hover, .open:hover, .close:hover {
+text-decoration:underline;
+cursor: pointer;
+}
+.show_all, .open {
+margin-right: 10px;
+}
+
+</style>
+</head>
+<body>
+<div class="all">
+<span class="show_all">show all</span>
+<span class="hide_all">hide all</span>
+</div>
+<div class="slider">
+<h1 class="info">Finance</h1>
+<span class="open">show content</span>
+<span class="close">close</span><br>
+<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries</p>
+</div>
+<div class="slider"><h1 class="info">Marketing</h1>
+<span class="open">show content</span>
+<span class="close">close</span><br>
+<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries</p>
+</div>
+<div class="slider"><h1 class="info">Social Media</h1>
+<span class="open">show content</span>
+<span class="close">close</span><br>
+<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries</p>
+</div>
+</body>
+</html> 
