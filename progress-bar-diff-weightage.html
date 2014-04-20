@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<title>jQuery progress bar</title>
+<head>
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<!--<script>
+$(document).ready(function(){
+    $("#submit").click(function(){
+var formFields = new Array();
+formFields["username"] = 20;
+formFields["password"] = 20;
+formFields["email"] = 30;
+formFields["phone"] = 10;
+formFields["department"] = 12;
+formFields["company"] = 8;
+var length = $('input').length;
+var same = 0;	
+         var counter = 0;        
+        $(".element").each(function(){
+            if($(this).val() != ""){
+var id = $(this).attr('id');
+var sameValue = formFields[id];
+same = same+sameValue;
+                counter++;                        
+            };
+    });
+        var counterVal = same;
+         $("#result").progressbar({
+                value:   counterVal        
+            });
+         return false;
+});
+})
+
+</script>-->
+<script>
+	$(document).ready(function(){
+		$("#submit").click(function(){
+			var formFields = new Array();
+			formFields["username"]=20;
+			formFields["password"]=20;
+			formFields["email"]=30;
+			formFields["phone"]=10;
+			formFields["department"]=12;
+			formFields["company"]=8;
+			var same = 0;
+			var length = $('input').length;
+			var counter = 0;
+			$(".element").each(function(){
+				if($(this).val() != "") {
+					var id = $(this).attr('id');
+					var sameValue = formFields[id];
+					same=same+sameValue;
+					counter++;			
+				};			
+			});
+			var counterVal = same;
+			$("#result").progressbar({
+				value: counterVal			
+			});
+			return false;					
+		});	
+	})
+</script>
+<style>
+#container {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #FFDAB9;
+    padding: 15px;
+}
+.element {
+    margin-left:25px;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div>Progress bar of your submitted information</div>
+<div id="result"></div>
+<form>
+<div>Username<input type="text" class="element" id="username"></div><br>
+<div>Password<input type="password" class="element" id="password"></div><br>
+<div>Email<input type="text" class="element" id="email"></div><br>
+<div>Phone<input type="text" class="element"  id="phone"></div><br>
+<div>Department<input type="text" class="element" id="department"></div><br>
+<div>Company<input type="text" class="element" id="company"></div><br>
+<button id="submit">Submit</button>
+</form>
+</div>
+</body>
+</html>
